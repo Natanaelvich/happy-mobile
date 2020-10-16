@@ -19,7 +19,11 @@ const MapOrphanages: React.FC = () => {
   const navigation = useNavigation();
 
   function handleGotoOrphanage(): void {
-    navigation.navigate('Orphanage');
+    navigation.navigate('OrphanageDetails');
+  }
+
+  function handleGotocREATEOrphanage(): void {
+    navigation.navigate('OrphanageData');
   }
   return (
     <Container>
@@ -48,7 +52,7 @@ const MapOrphanages: React.FC = () => {
         >
           <Callout onPress={handleGotoOrphanage} tooltip>
             <CalloutContainer>
-              <CalloutText>lar das meninas</CalloutText>
+              <CalloutText>LAR DAS MENINAS</CalloutText>
               <CalloutIconButton />
             </CalloutContainer>
           </Callout>
@@ -57,7 +61,7 @@ const MapOrphanages: React.FC = () => {
 
       <Footer>
         <FooterText>2 orfanatos encontrados</FooterText>
-        <CreateOrphanageButton>
+        <CreateOrphanageButton onPress={handleGotocREATEOrphanage}>
           <PlusIcon />
         </CreateOrphanageButton>
       </Footer>

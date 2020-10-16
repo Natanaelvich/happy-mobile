@@ -23,7 +23,7 @@ export const CalloutText = styled.Text`
   font-size: 14px;
 `;
 export const CalloutIconButton = styled(MaterialCommunityIcons).attrs({
-  name: 'arrow-right-bold-box',
+  name: 'arrow-right',
   size: 24,
   color: '#0089a5',
 })``;

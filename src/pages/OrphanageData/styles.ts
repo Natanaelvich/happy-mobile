@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
 
   label: {
     color: '#8fa7b3',
-    fontFamily: 'Nunito_600SemiBold',
+    fontFamily: 'Nunito_400Regular',
     marginBottom: 8,
   },
 
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
   },
 
   nextButtonText: {
-    fontFamily: 'Nunito_800ExtraBold',
+    fontFamily: 'Nunito_700Bold',
     fontSize: 16,
     color: '#FFF',
   },

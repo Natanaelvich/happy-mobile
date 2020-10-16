@@ -92,7 +92,7 @@ const OrphanageDetails: React.FC = () => {
           </View>
         </View>
 
-        <RectButton
+        {/* <RectButton
           style={styles.contactButton}
           onPress={() => {
             console.log('teste');
@@ -100,7 +100,7 @@ const OrphanageDetails: React.FC = () => {
         >
           <FontAwesome name="whatsapp" size={24} color="#FFF" />
           <Text style={styles.contactButtonText}>Entrar em contato</Text>
-        </RectButton>
+        </RectButton> */}
       </View>
     </ScrollView>
   );
