@@ -1,4 +1,5 @@
 import { MaterialCommunityIcons } from 'expo-vector-icons';
+import { RectButton } from 'react-native-gesture-handler';
 import styled from 'styled-components/native';
 
 export const Container = styled.View`
@@ -47,7 +48,7 @@ export const FooterText = styled.Text`
   color: #8fa7b3;
   margin-left: 24px;
 `;
-export const CreateOrphanageButton = styled.TouchableOpacity`
+export const CreateOrphanageButton = styled(RectButton)`
   width: 56px;
   height: 56px;
   background: #15c3d6;

@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "happy",
-    "slug": "happy",
+    "name": "happy portfolio",
+    "slug": "happy-portfolio",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -17,7 +17,18 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "com.mundotech.happy",
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "package": "com.mundotech.happy",
+      "enableDangerousExperimentalLeanBuilds" : true,
+      "versionCode": 1,
+      "config" : {
+        "googleMaps" : {
+          "apiKey" : "AIzaSyBhjZkufLeO0QqD3ug0qRnAyDe6Pvw8Egk"
+        }
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
