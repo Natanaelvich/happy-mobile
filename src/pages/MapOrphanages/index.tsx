@@ -24,9 +24,12 @@ import {
   ButtonEditStateCity,
   IconEdit,
   StateCityContainer,
+  Logo,
 } from './styles';
 import markerImg from '../../assets/Local.png';
 import api from '../../services/api';
+import logo from '../../assets/Local.png';
+import imageBg from '../../assets/bg-mobile.png';
 
 interface OrphanageProps {
   id: string;
@@ -87,7 +90,7 @@ const MapOrphanages: React.FC = () => {
       setLoadingGetStateCity(true);
 
       const cidade = await api.post(
-        `https://maps.googleapis.com/maps/api/geocode/json?address=${cep}&key=${env.REACT_APP_GOOGLE_MAP_TOKEN}`,
+        `https://maps.googleapis.com/maps/api/geocode/json?address=${cep}&language=pt&key=${env.REACT_APP_GOOGLE_MAP_TOKEN}`,
       );
 
       const city = cidade.data.results[0].formatted_address.split(',')[0];
@@ -142,7 +145,7 @@ const MapOrphanages: React.FC = () => {
   }
 
   return (
-    <Container>
+    <Container source={imageBg}>
       {location.latitude && location.longitude ? (
         <>
           <StateCityContainer>
@@ -199,6 +202,7 @@ const MapOrphanages: React.FC = () => {
         </>
       ) : (
         <Form>
+          <Logo resizeMode="contain" source={logo} />
           <Label>Digite seu CEP</Label>
           <Input value={cep} onChangeText={(text: string) => setCep(text)} />
 

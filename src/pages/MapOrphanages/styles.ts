@@ -1,13 +1,26 @@
 import { MaterialCommunityIcons, MaterialIcons } from 'expo-vector-icons';
-import { StyleSheet } from 'react-native';
+import {
+  ImageBackgroundProps,
+  ImageProps,
+  StyleSheet,
+  TextInputProps,
+  TextProps,
+  ViewProps,
+} from 'react-native';
 import { BorderlessButton, RectButton } from 'react-native-gesture-handler';
 import styled from 'styled-components/native';
 
-export const Container = styled.View`
+export const Container: React.FC<ImageBackgroundProps> = styled.ImageBackground`
   position: relative;
   flex: 1;
 `;
-export const StateCityContainer = styled.View`
+export const Logo: React.FC<ImageProps> = styled.Image`
+  align-self: center;
+  height: 100px;
+  width: 100px;
+  margin-bottom: 12px;
+`;
+export const StateCityContainer: React.FC<ViewProps> = styled.View`
   position: absolute;
   top: 24px;
   right: 24px;
@@ -15,7 +28,7 @@ export const StateCityContainer = styled.View`
   flex-direction: row;
   align-items: center;
 `;
-export const StateCity = styled.Text`
+export const StateCity: React.FC<TextProps> = styled.Text`
   font-family: Nunito_700Bold;
   color: #0089a5;
   font-size: 14px;
@@ -27,7 +40,7 @@ export const IconEdit = styled(MaterialIcons).attrs({
   size: 24,
   color: '#0089a5',
 })``;
-export const CalloutContainer = styled.View`
+export const CalloutContainer: React.FC<ViewProps> = styled.View`
   flex-direction: row;
   width: 160px;
   height: 46px;
@@ -39,7 +52,7 @@ export const CalloutContainer = styled.View`
   border-color: #0089a5;
   border-radius: 6px;
 `;
-export const CalloutText = styled.Text`
+export const CalloutText: React.FC<TextProps> = styled.Text`
   font-family: Nunito_700Bold;
   color: #0089a5;
   font-size: 14px;
@@ -49,7 +62,7 @@ export const CalloutIconButton = styled(MaterialCommunityIcons).attrs({
   size: 24,
   color: '#0089a5',
 })``;
-export const Footer = styled.View`
+export const Footer: React.FC<ViewProps> = styled.View`
   position: absolute;
   height: 56px;
   bottom: 12px;
@@ -63,7 +76,7 @@ export const Footer = styled.View`
   align-self: center;
   elevation: 2;
 `;
-export const FooterText = styled.Text`
+export const FooterText: React.FC<TextProps> = styled.Text`
   font-family: Nunito_700Bold;
   font-size: 15px;
   color: #8fa7b3;
@@ -82,18 +95,18 @@ export const PlusIcon = styled(MaterialCommunityIcons).attrs({
   size: 31,
   color: '#fff',
 })``;
-export const Form = styled.View`
+export const Form: React.FC<ViewProps> = styled.View`
   padding: 0 40px;
   justify-content: center;
   flex: 1;
 `;
-export const Label = styled.TextInput`
+export const Label: React.FC<TextProps> = styled.TextInput`
   font-family: Nunito_700Bold;
   font-size: 15px;
   color: #8fa7b3;
   margin-bottom: 12px;
 `;
-export const Input = styled.TextInput`
+export const Input: React.FC<TextInputProps> = styled.TextInput`
   height: 56px;
   background: #fff;
   border-width: ${StyleSheet.hairlineWidth}px;
@@ -109,7 +122,7 @@ export const ButtonSubmit = styled(RectButton)`
   align-items: center;
   justify-content: center;
 `;
-export const ButtonSubmitText = styled.Text`
+export const ButtonSubmitText: React.FC<TextProps> = styled.Text`
   font-family: Nunito_400Regular;
   font-size: 15px;
   color: #fff;
