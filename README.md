@@ -8,10 +8,6 @@
 
 ## ScreenShots
 
-<p align='center'>
-
-</ p>
-
 ## Install
 
     $ git clone https://github.com/ORG/PROJECT.git
