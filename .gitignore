@@ -14,8 +14,6 @@ web-build/
 
 # logs
 yarn-error.log
-yarn.lock
-package-lock.json
 
 #.env
 env.ts
